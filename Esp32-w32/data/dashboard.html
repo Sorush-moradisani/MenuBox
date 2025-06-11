@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>پنل مدیریت کافی‌شاپ</title>
+    <link rel="stylesheet" href="css/css@3.css">
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet"/>
+    <link href="css/flickity.min.css" rel="stylesheet"/>
+    <link href="css/styles.css?v=3" rel="stylesheet"/>
+    <link href="css/index.css?v=3" rel="stylesheet"/>
+    <link href="css/colorPick.min.css" rel="stylesheet">
+    <link href="css/colorPick.dark.theme.css" rel="stylesheet">
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="home-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6zM13 12.5a2 2 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5"/>
+        <path d="m4.4.8-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 3.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8m3 0-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 6.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8m3 0-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 9.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8"/>
+      </symbol>
+      <symbol id="menu-cafe-icon" viewBox="0 0 16 16">
+        <path d="M7.646 15.854a.5.5 0 0 0 .708 0L10.207 14H14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3.793zM1 9V6h14v3zm14 1v2a1 1 0 0 1-1 1h-3.793a1 1 0 0 0-.707.293l-1.5 1.5-1.5-1.5A1 1 0 0 0 5.793 13H2a1 1 0 0 1-1-1v-2zm0-5H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zM2 11.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 0-1h-8a.5.5 0 0 0-.5.5m0-4a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11a.5.5 0 0 0-.5.5m0-4a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1h-6a.5.5 0 0 0-.5.5"/>
+      </symbol>
+      <symbol id="menu-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+      </symbol>
+      <symbol id="add-order-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5"/>
+        <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"/>
+      </symbol>
+      <symbol id="orders-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6zM13 12.5a2 2 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5M2.64 13.825 1.123 7h11.754l-1.517 6.825A1.5 1.5 0 0 1 9.896 15H4.104a1.5 1.5 0 0 1-1.464-1.175"/>
+        <path d="m4.4.8-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 3.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8m3 0-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 6.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8m3 0-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 9.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8"/>
+      </symbol>
+      <symbol id="notifications-icon" viewBox="0 0 16 16">
+        <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6"/>
+      </symbol>
+      <symbol id="old-orders-icon" viewBox="0 0 16 16">
+        <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+        <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+      </symbol>
+      <symbol id="settings-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10.5 1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4H1.5a.5.5 0 0 1 0-1H10V1.5a.5.5 0 0 1 .5-.5M12 3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m-6.5 2A.5.5 0 0 1 6 6v1.5h8.5a.5.5 0 0 1 0 1H6V10a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5M1 8a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 1 8m9.5 2a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V13H1.5a.5.5 0 0 1 0-1H10v-1.5a.5.5 0 0 1 .5-.5m1.5 2.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5"/>
+      </symbol>
+      <symbol id="logout-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+      </symbol>
+      <symbol id="move-up-icon" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+      </symbol>
+      <symbol id="move-down-icon" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
+      </symbol>
+      <symbol id="paper-icon" viewBox="0 0 16 16">
+        <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5z"/>
+        <path d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z"/>
+      </symbol>
+      <symbol id="wifi-icon" viewBox="0 0 16 16">
+        <path d="M15.384 6.115a.485.485 0 0 0-.047-.736A12.44 12.44 0 0 0 8 3C5.259 3 2.723 3.882.663 5.379a.485.485 0 0 0-.048.736.52.52 0 0 0 .668.05A11.45 11.45 0 0 1 8 4c2.507 0 4.827.802 6.716 2.164.205.148.49.13.668-.049"/>
+        <path d="M13.229 8.271a.482.482 0 0 0-.063-.745A9.46 9.46 0 0 0 8 6c-1.905 0-3.68.56-5.166 1.526a.48.48 0 0 0-.063.745.525.525 0 0 0 .652.065A8.46 8.46 0 0 1 8 7a8.46 8.46 0 0 1 4.576 1.336c.206.132.48.108.653-.065m-2.183 2.183c.226-.226.185-.605-.1-.75A6.5 6.5 0 0 0 8 9c-1.06 0-2.062.254-2.946.704-.285.145-.326.524-.1.75l.015.015c.16.16.407.19.611.09A5.5 5.5 0 0 1 8 10c.868 0 1.69.201 2.42.56.203.1.45.07.61-.091zM9.06 12.44c.196-.196.198-.52-.04-.66A2 2 0 0 0 8 11.5a2 2 0 0 0-1.02.28c-.238.14-.236.464-.04.66l.706.706a.5.5 0 0 0 .707 0l.707-.707z"/>
+      </symbol>
+      <symbol id="battery-0-icon" viewBox="0 0 819.02 446.74">
+        <g>
+          <path d="M779.31,99.27h-34.75v-59.56c0-21.94-17.77-39.71-39.71-39.71H39.71C17.77,0,0,17.77,0,39.71v367.32c0,21.94,17.77,39.71,39.71,39.71h665.14c21.94,0,39.71-17.77,39.71-39.71v-59.56h34.75c21.94,0,39.71-17.77,39.71-39.71v-168.77c0-21.94-17.77-39.71-39.71-39.71ZM694.92,397.1H49.64V49.64h645.29v347.46Z"/>
+        </g>
+      </symbol>
+      <symbol id="battery-25-icon" viewBox="0 0 819.02 446.74">
+        <g>
+          <path d="M779.31,99.27h-34.75v-59.56c0-21.94-17.77-39.71-39.71-39.71H39.71C17.77,0,0,17.77,0,39.71v367.32c0,21.94,17.77,39.71,39.71,39.71h665.14c21.94,0,39.71-17.77,39.71-39.71v-59.56h34.75c21.94,0,39.71-17.77,39.71-39.71v-168.77c0-21.94-17.77-39.71-39.71-39.71ZM694.92,397.1H49.64V49.64h645.29v347.46Z"/>
+          <rect x="99.27" y="99.27" width="99.27" height="248.19" rx="9.93" ry="9.93"/>
+        </g>
+      </symbol>
+      <symbol id="battery-50-icon" viewBox="0 0 819.02 446.74">
+        <g>
+          <path d="M779.31,99.27h-34.75v-59.56c0-21.94-17.77-39.71-39.71-39.71H39.71C17.77,0,0,17.77,0,39.71v367.32c0,21.94,17.77,39.71,39.71,39.71h665.14c21.94,0,39.71-17.77,39.71-39.71v-59.56h34.75c21.94,0,39.71-17.77,39.71-39.71v-168.77c0-21.94-17.77-39.71-39.71-39.71ZM694.92,397.1H49.64V49.64h645.29v347.46Z"/>
+          <rect x="99.27" y="99.27" width="99.27" height="248.19" rx="9.93" ry="9.93"/>
+          <rect x="248.19" y="99.27" width="99.27" height="248.19" rx="9.93" ry="9.93"/>
+        </g>
+      </symbol>
+      <symbol id="battery-75-icon" viewBox="0 0 819.02 446.74">
+        <g>
+          <path d="M779.31,99.27h-34.75v-59.56c0-21.94-17.77-39.71-39.71-39.71H39.71C17.77,0,0,17.77,0,39.71v367.32c0,21.94,17.77,39.71,39.71,39.71h665.14c21.94,0,39.71-17.77,39.71-39.71v-59.56h34.75c21.94,0,39.71-17.77,39.71-39.71v-168.77c0-21.94-17.77-39.71-39.71-39.71ZM694.92,397.1H49.64V49.64h645.29v347.46Z"/>
+          <rect x="99.27" y="99.27" width="99.27" height="248.19" rx="9.93" ry="9.93"/>
+          <rect x="248.19" y="99.27" width="99.27" height="248.19" rx="9.93" ry="9.93"/>
+          <rect x="397.1" y="99.27" width="99.27" height="248.19" rx="9.93" ry="9.93"/>
+        </g>
+      </symbol>
+      <symbol id="battery-100-icon" viewBox="0 0 819.02 446.74">
+        <g>
+          <rect x="99.27" y="99.27" width="99.27" height="248.19" rx="9.93" ry="9.93"/>
+          <path d="M258.11,99.27h79.42c5.48,0,9.93,4.45,9.93,9.93v228.33c0,5.48-4.45,9.93-9.93,9.93h-79.42c-5.48,0-9.93-4.45-9.93-9.93V109.2c0-5.48,4.45-9.93,9.93-9.93Z"/>
+          <rect x="397.1" y="99.27" width="99.27" height="248.19" rx="9.93" ry="9.93"/>
+          <rect x="546.01" y="99.27" width="99.27" height="248.19" rx="9.93" ry="9.93"/>
+          <path d="M779.31,99.27h-34.75v-59.56c0-21.94-17.77-39.71-39.71-39.71H39.71C17.77,0,0,17.77,0,39.71v367.32c0,21.94,17.77,39.71,39.71,39.71h665.14c21.94,0,39.71-17.77,39.71-39.71v-59.56h34.75c21.94,0,39.71-17.77,39.71-39.71v-168.77c0-21.94-17.77-39.71-39.71-39.71ZM694.92,397.1H49.64V49.64h645.29v347.46Z"/>
+        </g>
+      </symbol>
+      <symbol id="battery-charging-icon" viewBox="0 0 819.02 446.74">
+        <g>
+          <path d="M238.04,1.12L5.49,117.39c-8.1,4.05-6.99,15.94,1.71,18.42l149.19,42.63-93.71,112.45c-6.88,8.26,2.45,20.04,12.07,15.23l232.55-116.27c8.1-4.05,6.99-15.94-1.71-18.42l-149.19-42.63L250.1,16.35c6.88-8.26-2.45-20.04-12.07-15.23Z"/>
+        </g>
+      </symbol>
+      <symbol id="add-icon" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2"/>
+      </symbol>
+      <symbol id="edit-icon" viewBox="0 0 16 16">
+        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z"/>
+      </symbol>
+      <symbol id="delete-icon" viewBox="0 0 16 16">
+        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+      </symbol>
+      <symbol id="check-icon" viewBox="0 0 16 16">
+        <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
+      </symbol>
+      <symbol id="import-icon" viewBox="0 0 16 16">
+        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+      </symbol>
+      <symbol id="export-icon" viewBox="0 0 16 16">
+        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+        <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
+      </symbol>
+      <symbol id="save-icon" viewBox="0 0 16 16">
+        <path d="M11 2H9v3h2z"/>
+        <path d="M1.5 0h11.586a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13A1.5 1.5 0 0 1 1.5 0M1 1.5v13a.5.5 0 0 0 .5.5H2v-4.5A1.5 1.5 0 0 1 3.5 9h9a1.5 1.5 0 0 1 1.5 1.5V15h.5a.5.5 0 0 0 .5-.5V2.914a.5.5 0 0 0-.146-.353l-1.415-1.415A.5.5 0 0 0 13.086 1H13v4.5A1.5 1.5 0 0 1 11.5 7h-7A1.5 1.5 0 0 1 3 5.5V1H1.5a.5.5 0 0 0-.5.5m3 4a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V1H4zM3 15h10v-4.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5z"/>
+      </symbol>
+      <symbol id="shop-icon" viewBox="0 0 16 16">
+        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+      </symbol>
+    </svg>
+    <main style="height: 100%; top: 0; left: 0; right: 0;" class="position-fixed d-flex flex-nowrap">
+      <div id="navigation" class="offcanvas offcanvas-start d-md-flex flex-column flex-shrink-0 p-3 bg-body-tertiary" style="width: 280px;">
+        <a href="" class="w-100 d-flex flex-column justify-content-center align-items-center p-2 mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <svg class="bi pe-none mb-3" width="80" height="80"><use xlink:href="#home-icon"></use></svg>
+          <span id="site-title" class="fs-5 mb-2">کافی‌شاپ</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item py-1">
+            <button id="orders-btn" data-content="orders" class="nav-link link-body-emphasis active d-flex align-items-center" data-bs-dismiss="offcanvas" data-bs-target="#navigation">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#orders-icon"></use></svg>
+              سفارشات
+              <span class="badge bg-danger text-white ms-auto d-none">0</span>
+            </button>
+          </li>
+          <li class="nav-item py-1">
+            <button id="notifications-btn" data-content="notifications" class="nav-link link-body-emphasis d-flex align-items-center" data-bs-dismiss="offcanvas" data-bs-target="#navigation">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#notifications-icon"></use></svg>
+              اعلانات
+              <span class="badge bg-danger text-white ms-auto d-none">0</span>
+            </button>
+          </li>
+          <li class="nav-item py-1">
+            <button data-content="add-order" class="nav-link link-body-emphasis d-flex align-items-center" data-bs-dismiss="offcanvas" data-bs-target="#navigation">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#add-order-icon"></use></svg>
+              ثبت سفارش جدید
+            </button>
+          </li>
+          <li class="nav-item py-1">
+            <button id="old-orders-btn" data-content="old-orders" class="nav-link link-body-emphasis d-flex align-items-center" data-bs-dismiss="offcanvas" data-bs-target="#navigation">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#old-orders-icon"></use></svg>
+              سفارشات انجام شده
+            </button>
+          </li>
+          <li class="nav-item py-1">
+            <button data-content="menu" class="nav-link link-body-emphasis d-flex align-items-center" data-bs-dismiss="offcanvas" data-bs-target="#navigation">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#menu-cafe-icon"></use></svg>
+              منوی کافی‌شاپ
+            </button>
+          </li>
+          <li class="nav-item py-1">
+            <button id="config-btn" data-content="setting" class="nav-link link-body-emphasis d-flex align-items-center" data-bs-dismiss="offcanvas" data-bs-target="#navigation">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#settings-icon"></use></svg>
+              تنظیمات
+            </button>
+          </li>
+          <li class="nav-item py-1">
+            <button id="logout" class="nav-link link-body-emphasis d-flex align-items-center text-danger" data-bs-dismiss="offcanvas" data-bs-target="#navigation">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#logout-icon"></use></svg>
+              خروج از حساب کاربری
+            </button>
+          </li>
+        </ul>
+        <hr>
+        <div id="battery-view" class="d-flex align-items-center py-2 w-100">
+          <span class="fs-5 me-auto">باتری</span>
+          <svg id="battery-charging" class="bi pe-none mt-2 me-1 mb-1 d-none" width="32" height="32"><use xlink:href="#battery-charging-icon"></use></svg>
+          <svg id="battery-0" class="bi pe-none ms-2" width="32" height="32"><use xlink:href="#battery-0-icon"></use></svg>
+          <svg id="battery-25" class="bi pe-none ms-2 d-none" width="32" height="32"><use xlink:href="#battery-25-icon"></use></svg>
+          <svg id="battery-50" class="bi pe-none ms-2 d-none" width="32" height="32"><use xlink:href="#battery-50-icon"></use></svg>
+          <svg id="battery-75" class="bi pe-none ms-2 d-none" width="32" height="32"><use xlink:href="#battery-75-icon"></use></svg>
+          <svg id="battery-100" class="bi pe-none ms-2 d-none" width="32" height="32"><use xlink:href="#battery-100-icon"></use></svg>
+        </div>
+      </div>
+      <div class="flex-fill">
+        <div id="sections" class="tab-content d-flex">
+          <div id="orders" class="flex-fill tab-pane fade show active">
+            <div class="bg-primary p-2 d-flex align-items-center">
+              <a href="#" class="text-decoration-none p-2 d-xl-none text-white" data-bs-toggle="offcanvas" data-bs-target="#navigation">
+                <svg class="bi pe-none me-2" width="32" height="32"><use xlink:href="#menu-icon"></use></svg>
+              </a>
+              <div class="p-2 d-xl-flex d-none text-white">
+                <svg class="bi pe-none me-2" width="32" height="32"><use xlink:href="#orders-icon"></use></svg>
+              </div>
+              <span class="fs-4 text-white">سفارشات</span>
+            </div>
+            <div id="orders-data" style="max-height: 100%; padding-bottom: 100px !important;" class="p-2 pe-0 ps-4 overflow-y-auto row w-100">
+            </div>
+            <div id="orders-empty" class="h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+              <svg class="bi pe-none mb-5" width="80" height="80"><use xlink:href="#paper-icon"></use></svg>
+              <h3 class="mt-2">هیچ سفارشی وجود ندارد!</h3>
+            </div>
+          </div>
+          <div id="notifications" class="flex-fill tab-pane fade">
+            <div class="bg-primary p-2 d-flex align-items-center">
+              <a href="#" class="text-decoration-none p-2 d-xl-none text-white" data-bs-toggle="offcanvas" data-bs-target="#navigation">
+                <svg class="bi pe-none me-2" width="32" height="32"><use xlink:href="#menu-icon"></use></svg>
+              </a>
+              <div class="p-2 d-xl-flex d-none text-white">
+                <svg class="bi pe-none me-2" width="32" height="32"><use xlink:href="#notifications-icon"></use></svg>
+              </div>
+              <span class="fs-4 text-white">اعلانات</span>
+              <div class="flex-grow-1"></div>
+              <button id="delete-notifications-btn" type="button" class="btn btn-danger">
+                <div class="d-none d-lg-flex">
+                  <span class="v1">پاکسازی همه</span>
+                  <span class="v2 spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                  <span class="v2 d-none">در حال پاکسازی...</span>
+                </div>
+                <div class="d-lg-none">
+                  <svg class="v1 bi pe-none" width="20" height="20"><use xlink:href="#delete-icon"></use></svg>
+                  <span class="v2 spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                </div>
+              </button>
+            </div>
+            <div id="notifications-data" style="max-height: 100%; padding-bottom: 100px !important;" class="p-2 p-lg-4 overflow-y-auto w-100">
+            </div>
+            <div id="notifications-empty" class="h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+              <svg class="bi pe-none mb-5" width="80" height="80"><use xlink:href="#notifications-icon"></use></svg>
+              <h3 class="mt-2">هیچ اعلانی وجود ندارد!</h3>
+            </div>
+          </div>
+          <div id="add-order" class="flex-fill tab-pane fade">
+            <div class="bg-primary p-2 d-flex align-items-center">
+              <a href="#" class="text-decoration-none p-2 d-xl-none text-white" data-bs-toggle="offcanvas" data-bs-target="#navigation">
+                <svg class="bi pe-none me-2" width="32" height="32"><use xlink:href="#menu-icon"></use></svg>
+              </a>
+              <div class="p-2 d-xl-flex d-none text-white">
+                <svg class="bi pe-none me-2" width="32" height="32"><use xlink:href="#add-order-icon"></use></svg>
+              </div>
+              <span class="fs-4 text-white">ثبت سفارش جدید</span>
+              <div class="flex-grow-1"></div>
+              <a id="shop-btn" type="button" href="#submit-orders" class="position-relative text-white">
+                <svg class="bi pe-none" width="35" height="35"><use xlink:href="#shop-icon"></use></svg>
+                <span class="badge badge-secondary bg-secondary position-absolute d-none" style="right: -15px; bottom: -5px;">0</span>
+              </a>
+            </div>
+            <div id="admin-view" style="max-height: 100%; padding-bottom: 100px !important;" class="h-100 p-4 px-3 px-lg-4 overflow-y-auto w-100 d-flex flex-column align-items-center">
+              <div id="add-order-data" style="max-width: 1000px;" class="w-100 d-flex flex-column align-items-center"></div>
+              <div style="max-width: 1000px;" class="d-flex flex-column align-items-center w-100">
+                <div class="card card-body d-flex flex-column align-items-center w-100 mt-4 p-4">
+                  <div id="orders-list"></div>
+                  <div class="d-flex flex-nowrap align-items-center my-5">
+                    <h5 style="width: 100px;" class="fs-5">شماره میز:</h5>
+                    <input style="width: 150px;" type="number" min="1" class="form-control" id="table-number" value="1"/>
+                  </div>
+                  <h4 class="fs-5">توضیحات سفارش:</h4>
+                  <textarea id="order-desc" style="max-width: 600px;" class="w-100 p-3 mt-3" rows="6" maxlength="300" placeholder="توضیحات"></textarea>
+                </div>
+                <div class="card card-body d-flex flex-row align-items-center w-100 mt-4 p-4">
+                  <h4 class="fs-5">هزینه نهایی:</h4>
+                  <div class="flex-grow-1"></div>
+                  <h4 id="final-price" class="fs-4">0 تومان</h4>
+                </div>
+                <button id="submit-orders" type="button" class="btn btn-success fs-5 px-5 mx-auto mt-5" style="height: 60px; width: 300px;" disabled>ثبت سفارش</button>
+              </div>
+            </div>
+          </div>
+          <div id="old-orders" class="flex-fill tab-pane fade">
+            <div class="bg-primary p-2 d-flex align-items-center">
+              <a href="#" class="text-decoration-none p-2 d-xl-none text-white" data-bs-toggle="offcanvas" data-bs-target="#navigation">
+                <svg class="bi pe-none me-2" width="32" height="32"><use xlink:href="#menu-icon"></use></svg>
+              </a>
+              <div class="p-2 d-xl-flex d-none text-white">
+                <svg class="bi pe-none me-2" width="32" height="32"><use xlink:href="#old-orders-icon"></use></svg>
+              </div>
+              <span class="fs-4 text-white">سفارشات انجام شده</span>
+              <div class="flex-grow-1"></div>
+              <button id="delete-orders-btn" type="button" class="btn btn-danger">
+                <div class="d-none d-lg-flex">
+                  <span class="v1">پاکسازی همه</span>
+                  <span class="v2 spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                  <span class="v2 d-none">در حال پاکسازی...</span>
+                </div>
+                <div class="d-lg-none">
+                  <svg class="v1 bi pe-none" width="20" height="20"><use xlink:href="#delete-icon"></use></svg>
+                  <span class="v2 spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                </div>
+              </button>
+            </div>
+            <div id="old-orders-data" style="max-height: 100%; padding-bottom: 100px !important;" class="p-2 pe-0 ps-4 overflow-y-auto row w-100">
+            </div>
+            <div id="old-orders-empty" class="h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+              <svg class="bi pe-none mb-5" width="80" height="80"><use xlink:href="#paper-icon"></use></svg>
+              <h3 class="mt-2">هیچ سفارش انجام شده‌ای وجود ندارد!</h3>
+            </div>
+          </div>
+          <div id="menu" class="flex-fill tab-pane fade">
+            <div class="bg-primary p-2 d-flex align-items-center">
+              <a href="#" class="text-decoration-none p-2 d-xl-none text-white" data-bs-toggle="offcanvas" data-bs-target="#navigation">
+                <svg class="bi pe-none me-2" width="32" height="32"><use xlink:href="#menu-icon"></use></svg>
+              </a>
+              <div class="p-2 d-xl-flex d-none text-white">
+                <svg class="bi pe-none me-2" width="32" height="32"><use xlink:href="#menu-cafe-icon"></use></svg>
+              </div>
+              <span class="fs-4 text-white">منوی کافی‌شاپ</span>
+              <div class="flex-grow-1"></div>
+              <button id="import-btn" type="button" class="btn btn-info">
+                <span class="d-none d-lg-flex">بازیابی</span>
+                <svg class="bi pe-none d-lg-none" width="20" height="20"><use xlink:href="#import-icon"></use></svg>
+              </button>
+              <input id="import-input" type="file" accept=".json" class="d-none"/>
+              <button id="export-btn" type="button" class="btn btn-info mx-2 mx-lg-3">
+                <span class="d-none d-lg-flex">بکاپ</span>
+                <svg class="bi pe-none d-lg-none" width="20" height="20"><use xlink:href="#export-icon"></use></svg>
+              </button>
+              <button id="save-menu-btn" type="button" class="btn btn-success">
+                <div class="d-none d-lg-flex">
+                  <span class="v1">اعمال تغییرات</span>
+                  <span class="v2 spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                  <span class="v2 d-none">در حال اعمال تغییرات...</span>
+                </div>
+                <div class="d-lg-none">
+                  <svg class="v1 bi pe-none" width="20" height="20"><use xlink:href="#save-icon"></use></svg>
+                  <span class="v2 spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                </div>
+              </button>
+            </div>
+            <div id="food-data" style="max-height: 100%; padding-bottom: 100px !important;" class="h-100 p-lg-4 overflow-x-auto d-md-flex flex-fill flex-column align-items-center">
+            </div>
+          </div>
+          <div id="setting" class="flex-fill tab-pane fade">
+            <div class="bg-primary p-2 d-flex align-items-center">
+              <a href="#" class="text-decoration-none p-2 d-xl-none text-white" data-bs-toggle="offcanvas" data-bs-target="#navigation">
+                <svg class="bi pe-none me-2" width="32" height="32"><use xlink:href="#menu-icon"></use></svg>
+              </a>
+              <div class="p-2 d-xl-flex d-none text-white">
+                <svg class="bi pe-none me-2" width="32" height="32"><use xlink:href="#settings-icon"></use></svg>
+              </div>
+              <span class="fs-4 text-white">تنظیمات</span>
+              <div class="flex-grow-1"></div>
+              <button id="save-config-btn" type="button" class="btn btn-success">
+                <div class="d-none d-lg-flex">
+                  <span class="v1">اعمال تغییرات</span>
+                  <span class="v2 spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                  <span class="v2 d-none">در حال اعمال تغییرات...</span>
+                </div>
+                <div class="d-lg-none">
+                  <svg class="v1 bi pe-none" width="20" height="20"><use xlink:href="#save-icon"></use></svg>
+                  <span class="v2 spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                </div>
+              </button>
+            </div>
+            <div style="max-height: 100%; padding-bottom: 100px !important;" class="h-100 p-4 overflow-x-auto d-md-flex flex-fill flex-column align-items-center">
+              <h5 class="col-md-6">کافی‌شاپ</h5>
+              <div class="card p-3 d-flex flex-row justify-content-between col-md-6  mt-3">
+                <label>نام کافی‌شاپ</label>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="site-title-input">
+                </div>
+              </div>
+              <div class="card p-3 d-flex flex-row justify-content-between col-md-6  mt-3">
+                <label>سفارش توسط مشتری</label>
+                <div class="form-check form-switch">
+                  <input class="form-check-input fs-4" type="checkbox" role="switch" id="order-active"/>
+                </div>
+              </div>
+              <div class="card p-3 d-flex flex-row justify-content-between col-md-6  mt-3">
+                <label>آلارم سفارش جدید</label>
+                <div class="form-check form-switch">
+                  <input class="form-check-input fs-4" type="checkbox" role="switch" id="sound-new-order"/>
+                </div>
+              </div>
+              <div class="card p-3 d-flex flex-row justify-content-between col-md-6  mt-3">
+                <label>تم تاریک</label>
+                <div class="form-check form-switch">
+                  <input class="form-check-input fs-4" type="checkbox" role="switch" id="theme-mode"/>
+                </div>
+              </div>
+              <div class="card p-3 d-flex flex-row justify-content-between col-md-6  mt-3">
+                <label>رنگ تم (هدرها، دکمه‌ها و ...)</label>
+                <div class="picker" id="picker"></div>
+              </div>
+              <h5 class="mt-5 col-md-6">اطلاعات ورود به سیستم</h5>
+              <div class="card p-3 d-flex flex-row justify-content-between col-md-6 mt-3">
+                <label>نام کاربری</label>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="acc-username">
+                </div>
+              </div>
+              <div class="card p-3 d-flex flex-row justify-content-between col-md-6 mt-2">
+                <label>رمز عبور</label>
+                <div class="col-md-6">
+                  <input type="password" class="form-control" id="acc-password">
+                </div>
+              </div>
+              <h5 class="mt-5 col-md-6">وای‌فای</h5>
+              <div class="card p-3 d-flex flex-row justify-content-between col-md-6 mt-3">
+                <label>نام کاربری</label>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="wifi-username">
+                </div>
+              </div>
+              <div class="card p-3 d-flex flex-row justify-content-between col-md-6 mt-2">
+                <label>رمز عبور</label>
+                <div class="col-md-6">
+                  <input type="password" class="form-control" id="wifi-password">
+                </div>
+              </div>
+              <h5 class="mt-5 col-md-6">دستگاه</h5>
+              <div class="card p-3 py-4 d-flex flex-row justify-content-between col-md-6 mt-3">
+                <label>نسخه دستگاه</label>
+                <strong id="version-view"></strong>
+              </div>
+              <div class="card p-3 d-flex flex-row justify-content-between col-md-6 mt-3">
+                <label>بروزرسانی دستگاه</label>
+                <button id="update-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#updateModal">اجرا</button>
+              </div>
+              <div class="card p-3 d-flex flex-row justify-content-between col-md-6 mt-3">
+                <label>بازگشت به تنظیمات کارخانه</label>
+                <button id="update-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#resetFactoryModal">اجرا</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div id="notif-btn" class="p-2 d-none" style="position: absolute; left: 16px; bottom: 16px; z-index: 1;">
+      <button class="btn btn-primary p-3" style="border-radius: 100px;">
+        <svg class="bi" width="40" height="40"><use xlink:href="#notifications-icon"></use></svg>
+      </button>
+      <span class="badge bg-danger text-white fs-5" style="position: absolute; top: 0; right: 0; border-radius: 100px;">1</span>
+    </div>
+    <div id="addFoodTabModal" class="modal" data-id="">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">گروه اصلی جدید</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="food-tab-name">نام گروه</label>
+            <input type="text" class="form-control my-3" id="food-tab-name">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+            <button type="button" class="btn btn-primary" id="food-tab-save">افزودن</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="addFoodCatModal" class="modal" parent-id="" data-id="">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">گروه غذایی جدید</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="food-cat-name">نام گروه غذایی</label>
+            <input type="text" class="form-control my-3" id="food-cat-name">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+            <button type="button" class="btn btn-primary" id="food-cat-save">افزودن</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="addFoodModal" class="modal" parent-id="" data-id="">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">مواد غذایی جدید</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="food-name">نام مواد غذایی</label>
+            <input type="text" class="form-control my-3" maxlength="30" id="food-name">
+            <label for="food-name">توضیحات مواد غذایی</label>
+            <input type="text" class="form-control my-3" maxlength="100" id="food-desc">
+            <label for="food-name">قیمت مواد غذایی (تومان)</label>
+            <input type="number" class="form-control my-3" maxlength="20" id="food-price">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+            <button type="button" class="btn btn-primary" id="food-save">افزودن</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="updateModal" class="modal">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">بروزرسانی</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body" >
+            <div id="update-page-1" class="modal-page">
+              <li>
+                برای بروزرسانی دستگاه، به یک اینترنت احتیاج خواهید داشت. برای اینکار در ادامه نام‌کاربری و رمز‌عبور وای‌فایی که میخواهید به آن متصل بشوید و از اینترنت آن برای بروزرسانی استفاده کنید را وارد کنید
+              </li>
+              <li class="mt-3">
+                با شروع فرآیند بروزرسانی، دستگاه به حالت بروزرسانی خواهد رفت و پس از چند دقیقه پس از پایان کار از این حالت خارج خواهد شد و شما میتوانید دوباره به دستگاهتان متصل بشوید
+              </li>
+            </div>
+            <div id="update-page-2" class="modal-page d-none">
+              <div class="d-flex flex-column align-items-center justify-content-center">
+                <h5>اطلاعات دستگاه‌ وای‌فای</h5>
+                <div class="d-flex flex-column justify-content-center mt-2 w-100">
+                  <label class="fs-5">نام‌کاربری</label>
+                  <input type="password" class="form-control fs-5 mt-3" id="wifi-device-ssid">
+                  <label class="fs-5 mt-3">رمز عبور</label>
+                  <input type="password" class="form-control fs-5 my-3" id="wifi-device-password">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+            <button type="button" class="btn btn-info d-none" id="update-back-btn">بازگشت</button>
+            <button type="button" class="btn btn-primary" id="accept-update-btn">متوجه شدم</button>
+            <button type="button" class="btn btn-primary d-none" data-bs-dismiss="modal" id="update-start-btn">بروزرسانی</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="lowBattreyModal" class="modal" data-id="">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0 d-flex flex-column">
+            <div class="d-flex justify-content-center align-items-center text-danger pt-5">
+              <svg class="bi pe-none me-2" width="120" height="120"><use xlink:href="#battery-0-icon"></use></svg>
+            </div>
+            <div class="d-flex justify-content-center align-items-center py-5">
+              <h4 class="text-danger">باتری ضعیف است!</h4>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-bs-dismiss="modal">متوجه شدم</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="resetFactoryModal" class="modal" data-id="">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">بازگشت به تنظیمات کارخانه</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body p-0 pb-4 d-flex flex-column">
+            <div class="p-3 fs-5">
+              <p>با انتخاب هر یک از گزینه‌ها، تمامی اطلاعات آن بخش به حالت پیشفرض کارخانه خواهد رفت.</p>
+            </div>
+            <div class="p-3 fs-5">
+              <input class="form-check-input" type="checkbox" value="" id="settingReset" checked disabled>
+              <label class="form-check-label" for="settingReset">
+                تنظیمات
+              </label>
+            </div>
+            <div class="p-3 fs-5">
+              <input class="form-check-input" type="checkbox" value="" id="menuReset">
+              <label class="form-check-label" for="menuReset">
+                منوی کافی‌شاپ
+              </label>
+            </div>
+            <div class="p-3 fs-5">
+              <input class="form-check-input" type="checkbox" value="" id="orderReset">
+              <label class="form-check-label" for="orderReset">
+                سفارشات کافی‌شاپ
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">بستن</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="reset-factory-btn">بازگشت به تنظیمات کارخانه</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/flickity.pkgd.min.js"></script>
+    <script src="js/moment.min.js?v=3"></script>
+    <script src="js/moment-jalaali.js"></script>
+    <script src="js/custom-alet.js"></script>
+    <script src="js/sidebars.js?v=3"></script>
+    <script src="js/dashboard.js?v=3"></script>
+    <script src="js/orders.js?v=3"></script>
+    <script src="js/menu.js?v=3"></script>
+    <script src="js/colorPick.min.js"></script>
+    <script src="js/config.js?v=3"></script>
+    <script src="js/all.js?v=3"></script>
+    <script src="js/hammer.min.js"></script>
+    <script src="js/index.js?v=3"></script>
+  </body>
+</html>
